@@ -8,7 +8,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json()); //Used to parse JSON bodies
 
 app.use('/api/campus', Campus);
-const PORT = process.env.PORT || 3005;
+const PORT = process.env.PORT || 4000;
 
 mongoose.connect(
     'mongodb://localhost/campus',
