@@ -7,6 +7,9 @@ const app = express();
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json()); //Used to parse JSON bodies
 
+var cors = require('cors');
+app.use(cors());
+
 app.use('/api/campus', Campus);
 const PORT = process.env.PORT || 4000;
 
