@@ -8,6 +8,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json()); //Used to parse JSON bodies
 
 app.use('/api/campus', Campus);
+const PORT = process.env.PORT || 3005;
 
 mongoose.connect(
     'mongodb://localhost/campus',
@@ -17,7 +18,7 @@ mongoose.connect(
 
     (err, res) => {
         err && console.log('Error conectando a la bd');
-        app.listen(4000, () => {
+        app.listen(PORT, () => {
             console.log('Corriendo en el puerto 4000');
         })
     }
