@@ -32,6 +32,7 @@ const findById = (req, res) => {
 
 const addCampus = (req, res) => {
     let campus = new Campus({
+        favorito: req.body.favorito,
         agencia: req.body.agencia,
         distrito: req.body.distrito,
         provincia: req.body.provincia,

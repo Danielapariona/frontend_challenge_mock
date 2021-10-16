@@ -9,4 +9,3 @@ router.post("/add", CampusController.addCampus);
 router.post("/:id", CampusController.updateCampus);
 
 module.exports = router;
-
